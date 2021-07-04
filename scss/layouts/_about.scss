@@ -1,0 +1,45 @@
+.about {
+  padding-top: 49px;
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: center;
+    padding-bottom: 18px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4px;
+  }
+
+  &__item {
+    max-width: 140px;
+    // height: auto;
+    margin: 4px;
+    flex-basis: calc((100% - 2 * 8px) / 2);
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__subtitle {
+    padding-top: 15px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__description {
+    padding-top: 10px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    opacity: 0.8;
+  }
+}

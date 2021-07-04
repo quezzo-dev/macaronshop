@@ -1,0 +1,58 @@
+$array-bg: "../images/promoutions/promoutions1.jpg",
+  "../images/promoutions/promoutions2.jpg",
+  "../images/promoutions/promoutions3.jpg",
+  "../images/promoutions/promoutions4.jpg";
+
+$holidays-elements: "../images/holidays/holidays1.png",
+  "../images/holidays/holidays2.png", "../images/holidays/holidays3.png";
+// @mixin colorize($colors-menu-card, $selector, $selector-icon) {
+//   @each $color in $colors-menu-card {
+//     $idx: index($colors-menu-card, $color);
+//     #{$selector}:nth-child(#{$idx}) {
+//       background-color: #{$color};
+//       background-image: linear-gradient(
+//         to bottom nth($direction-menu-card, $idx),
+//         rgba(255, 255, 255, 0.3) 50%,
+//         #{$color} 50%
+//       );
+//     }
+//     #{$selector}:nth-child(#{$idx}) #{$selector-icon} {
+//       fill: #{$color};
+//     }
+//   }
+// }
+// $colors-menu-card: '#ffdbc3', '#ffc2cc', '#b4eab3', '#fdd5cd', '#a8dcdf',
+//   '#c4c6ec';
+// $direction-menu-card: right, left, left, right, right, left;
+@mixin array-bg($card, $selector) {
+  @each $color in $card {
+    $idx: index($card, $color);
+    #{$selector}:nth-child(#{$idx}) {
+      background-image: url(nth($card, $idx));
+    }
+  }
+}
+
+@mixin holidays-elements($card, $selector) {
+  @each $color in $card {
+    $idx: index($card, $color);
+    #{$selector}:nth-child(#{$idx})::before {
+      position: absolute;
+      content: "";
+      width: 100px;
+      height: 110px;
+      background-image: url(nth($card, $idx));
+      background-repeat: no-repeat;
+      //   //   background-position: center;
+      //   &:not(:first-child) {
+      //     background-position-y: 50px;
+      //   }
+
+      background-size: auto;
+      background-position-y: 100%;
+
+      top: -55px;
+      left: -75px;
+    }
+  }
+}

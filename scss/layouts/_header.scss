@@ -1,0 +1,36 @@
+.header {
+  background-color: $header-bg-color;
+  position: fixed;
+  width: 100%;
+  min-width: 320px;
+  height: 59px;
+  z-index: 999999;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 23px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+
+  &__head {
+    position: absolute;
+    top: 3px;
+  }
+
+  &__text {
+    position: absolute;
+    top: 20px;
+  }
+
+  &__butterfly {
+    position: absolute;
+    top: 49px;
+  }
+}

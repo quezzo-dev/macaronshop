@@ -1,0 +1,60 @@
+.promotions {
+  padding-top: 39px;
+
+  &__title {
+    text-align: center;
+    padding-bottom: 17px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    height: 423px;
+    max-width: 280px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-top: 307px;
+
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 600;
+    color: $white-color;
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    color: $white-color;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__dots-item {
+    width: 10px;
+    height: 10px;
+    &:first-child {
+      background-color: $accent-color;
+    }
+  }
+}
+
+@include array-bg($array-bg, ".promotions__item");
